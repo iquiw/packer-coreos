@@ -1,0 +1,4 @@
+/packer_cache/
+/*.box
+/id_rsa
+/ignition.json

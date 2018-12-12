@@ -1,0 +1,40 @@
+{
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "guest_os_type": "Linux_64",
+      "iso_url": "{{user `iso_url`}}",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_checksum_type": "sha512",
+      "memory": 2048,
+      "ssh_username": "core",
+      "ssh_private_key_file": "id_rsa",
+      "shutdown_command": "sudo /sbin/shutdown -P -h now",
+      "boot_command": [
+        "curl -sLo .ssh/authorized_keys https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub",
+        "<enter>"
+      ],
+      "boot_wait": "30s"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "ignition.json",
+      "destination": "/tmp/ignition.json"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo coreos-install -d /dev/sda -i /tmp/ignition.json"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "coreos-{{user `release`}}.box",
+      "compression_level": 9
+    }
+  ]
+}
