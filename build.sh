@@ -6,4 +6,9 @@ fi
 
 ct -pretty -in-file ignition.yml -out-file ignition.json
 
-packer build -var-file vars-alpha.json coreos.json
+release=alpha
+case $1 in
+stable)	release=stable ;;
+esac
+
+packer build -var-file "vars-$release.json" coreos.json

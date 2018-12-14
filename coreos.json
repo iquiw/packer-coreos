@@ -26,7 +26,7 @@
     {
       "type": "shell",
       "inline": [
-        "sudo coreos-install -d /dev/sda -i /tmp/ignition.json"
+        "sudo coreos-install -d /dev/sda -C {{user `release`}} -i /tmp/ignition.json"
       ]
     }
   ],
