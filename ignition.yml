@@ -1,15 +1,3 @@
-storage:
-  disks:
-    - device: /dev/sda
-      wipe_table: true
-      partitions:
-        - label: ROOT
-  filesystems:
-    - mount:
-        device: /dev/disk/by-partlabel/ROOT
-        format: ext4
-        wipe_filesystem: true
-        label: ROOT
 passwd:
   users:
     - name: vagrant
