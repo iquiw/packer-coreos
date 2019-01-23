@@ -14,6 +14,7 @@ ct -pretty -in-file ignition.yml | fx 'x => {
 release=alpha
 case $1 in
 stable)	release=stable ;;
+beta)	release=beta ;;
 esac
 
 packer build -var-file "vars-$release.json" coreos.json
