@@ -36,5 +36,12 @@
       }
     ]
   },
-  "systemd": {}
+  "systemd": {
+    "units": [
+      {
+        "enable": true,
+        "name": "docker.service"
+      }
+    ]
+  }
 }
