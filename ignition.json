@@ -36,18 +36,5 @@
       }
     ]
   },
-  "systemd": {
-    "units": [
-      {
-        "dropins": [
-          {
-            "contents": "[Service]\nEnvironment=\"ETCD_IMAGE_TAG=v3.3.10\"\nExecStart=\nExecStart=/usr/lib/coreos/etcd-wrapper $ETCD_OPTS\n[Install]\nAlias = etcd.service",
-            "name": "20-clct-etcd-member.conf"
-          }
-        ],
-        "enable": true,
-        "name": "etcd-member.service"
-      }
-    ]
-  }
+  "systemd": {}
 }

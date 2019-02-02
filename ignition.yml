@@ -7,7 +7,5 @@ passwd:
         - wheel
         - sudo
         - docker
-etcd:
-  version: 3.3.10
 locksmith:
   reboot_strategy: "reboot"
