@@ -2,8 +2,13 @@
 
 ## Prerequisite
 
+### For packer build
+
 * [VirtualBox](https://www.virtualbox.org)
 * [packer](https://www.packer.io/)
+
+### For maintenance
+
 * [Container Linux Config Transpiler](https://github.com/coreos/container-linux-config-transpiler)
 * [fx](https://github.com/antonmedv/fx)
 
