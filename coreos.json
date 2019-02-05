@@ -7,7 +7,7 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_checksum_type": "sha512",
       "memory": 2048,
-      "ssh_username": "core",
+      "ssh_username": "vagrant",
       "ssh_private_key_file": "id_rsa",
       "shutdown_command": "sudo /sbin/shutdown -P -h now",
       "boot_command": [
@@ -17,9 +17,24 @@
         "<enter>",
         "sudo coreos-install -d /dev/sda -C {{user `release`}} -i /tmp/ignition.json",
         "<enter>",
+        "sudo reboot",
+        "<enter>",
         "<wait3m>"
       ],
       "boot_wait": "30s"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "setup-kubeadm.sh",
+      "destination": "/tmp/setup-kubeadm.sh"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo sh /tmp/setup-kubeadm.sh"
+      ]
     }
   ],
   "post-processors": [

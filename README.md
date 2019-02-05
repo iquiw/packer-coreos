@@ -1,5 +1,7 @@
 # Packer CoreOS
 
+CoreOS (Container Linux) packer build with kubeadm-ready setting.
+
 ## Prerequisite
 
 ### For packer build
