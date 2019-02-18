@@ -1,5 +1,5 @@
 {
   "iso_url": "https://beta.release.core-os.net/amd64-usr/current/coreos_production_iso_image.iso",
-  "iso_checksum": "7af7afbe456ecc16a2c8b2ba69b72a92116822097dc18b76e1df4e90d5987139a95ac3ba4e0f5acf09a472b17fbb071b40519a8234827211a251234ee108f4a8",
+  "iso_checksum": "f1ac4f80f33f779fa8709c3cbc27540df31afb4a9ebe92a6dbec5fe8243bcde64e197c629ddb658057ae5b76f1405a1122a2b74398af45ea84540fae56610a5c",
   "release": "beta"
 }
