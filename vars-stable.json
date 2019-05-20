@@ -1,5 +1,5 @@
 {
   "iso_url": "https://stable.release.core-os.net/amd64-usr/current/coreos_production_iso_image.iso",
-  "iso_checksum": "e8d0e9b2d616cbbc4714cf48fe4e0318590ae9841e46474247a2e962814bf91d276ab76d5076f1987af95fda294e9c7cbb00543b7dff616f63cd87a93830ad11",
+  "iso_checksum": "3ae3f45c381cdbdb21698edeffcd3cb585db26bb421df935c3cb2867b442aea47bbb6b4eef59139bef0eb12d42067a9f1aec826efabe788afeb2bfe03bad2955",
   "release": "stable"
 }
