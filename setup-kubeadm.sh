@@ -4,7 +4,7 @@
 
 CNI_VERSION="v0.7.5"
 CRICTL_VERSION="v1.14.0"
-KUBE_VERSION="v1.14.0"
+KUBE_VERSION="v1.15.0"
 
 setup() {
 	mkdir -p /opt/cni/bin
