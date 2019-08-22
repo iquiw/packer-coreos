@@ -21,7 +21,7 @@
         "<enter>",
         "<wait3m>"
       ],
-      "boot_wait": "30s"
+      "boot_wait": "45s"
     }
   ],
   "provisioners": [
