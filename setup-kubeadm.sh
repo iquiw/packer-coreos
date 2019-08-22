@@ -2,9 +2,9 @@
 
 # https://kubernetes.io/docs/setup/independent/install-kubeadm/
 
-CNI_VERSION="v0.7.5"
-CRICTL_VERSION="v1.14.0"
-KUBE_VERSION="v1.15.0"
+CNI_VERSION="v0.8.2"
+CRICTL_VERSION="v1.15.0"
+KUBE_VERSION="v1.15.3"
 
 setup() {
 	mkdir -p /opt/cni/bin
