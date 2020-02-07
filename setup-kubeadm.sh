@@ -28,6 +28,8 @@ install_kube() {
 	curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${KUBE_VERSION}/build/debs/kubelet.service" | sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service
 	mkdir -p /etc/systemd/system/kubelet.service.d
 	curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${KUBE_VERSION}/build/debs/10-kubeadm.conf" | sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+
+	echo 'KUBELET_EXTRA_ARGS="--volume-plugin-dir=/var/lib/kubelet/volumeplugins"' > /etc/default/kubelet
 }
 
 setup
